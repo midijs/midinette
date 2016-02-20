@@ -1,0 +1,1 @@
+# Midinette - MIDI utility library

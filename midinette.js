@@ -351,7 +351,7 @@ var Midinette = {
 		);
 	},
 
-	constuctMIDIMessageArray : function(event, channel, data1, data2) {
+	constructMIDIMessage : function(event, channel, data1, data2) {
 		return [(event & 0xf0) + (channel - 1), data1, data2];
 	},
 
