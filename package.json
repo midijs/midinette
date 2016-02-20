@@ -1,0 +1,23 @@
+{
+  "name": "midinette",
+  "version": "1.0.0",
+  "description": "MIDI utility library",
+  "main": "midinette.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hngrhorace/midinette.git"
+  },
+  "keywords": [
+    "midi",
+    "util"
+  ],
+  "author": "Andor Polgar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hngrhorace/midinette/issues"
+  },
+  "homepage": "https://github.com/hngrhorace/midinette#readme"
+}
