@@ -1,4 +1,12 @@
 var Midinette = {
+	NOTE_OFF              : 0x80,
+	NOTE_ON               : 0x90,
+	POLYPHONIC_AFTERTOUCH : 0xa0,
+	CONTROL_CHANGE        : 0xb0,
+	PROGRAM_CHANGE        : 0xc0,
+	CHANNEL_AFTERTOUCH    : 0xd0,
+	PITCH_WHEEL           : 0xe0,
+
 	/*
 	 * Note Off event.
 	 * This message is sent when a note is released (ended).
