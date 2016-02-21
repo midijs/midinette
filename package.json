@@ -1,9 +1,9 @@
 {
   "name": "midinette",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "MIDI utility library",
   "main": "dist/index.js",
-  "jsnext": "src/index.js",
+  "jsnext:main": "src/index.js",
   "scripts": {
     "build:babel": "babel src --out-dir dist",
     "build:browserify": "browserify dist/*.js --outfile bundle/midinette.js",
