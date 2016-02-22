@@ -62,6 +62,7 @@ exports.default = {
 	PORTAMENTO_CONTROL: 0x54,
 	HIGH_RESOLUTION_VELOCITY_PREFIX: 0x58
 };
+module.exports = exports['default'];
 },{}],2:[function(require,module,exports){
 'use strict';
 
@@ -193,8 +194,8 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 var Midinette = Object.assign({}, _controlChange2.default, _midiNotes2.default, _statusCodes2.default, Functions);
 
 global.Midinette = Midinette;
-
 exports.default = Midinette;
+module.exports = exports['default'];
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"./controlChange":1,"./functions":2,"./midiNotes":4,"./statusCodes":5}],4:[function(require,module,exports){
 'use strict';
@@ -229,6 +230,7 @@ exports.default = {
 	'D10': 122, 'D#10': 123, 'E10': 124, 'F10': 125, 'F#10': 126,
 	'G10': 127
 };
+module.exports = exports['default'];
 },{}],5:[function(require,module,exports){
 "use strict";
 
@@ -399,4 +401,5 @@ exports.default = {
 	PITCH_WHEEL_CH15: 0xee,
 	PITCH_WHEEL_CH16: 0xef
 };
+module.exports = exports['default'];
 },{}]},{},[1,2,3,4,5]);

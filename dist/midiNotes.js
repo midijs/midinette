@@ -30,3 +30,4 @@ exports.default = {
 	'D10': 122, 'D#10': 123, 'E10': 124, 'F10': 125, 'F#10': 126,
 	'G10': 127
 };
+module.exports = exports['default'];

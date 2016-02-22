@@ -167,3 +167,4 @@ exports.default = {
 	PITCH_WHEEL_CH15: 0xee,
 	PITCH_WHEEL_CH16: 0xef
 };
+module.exports = exports['default'];

@@ -61,3 +61,4 @@ exports.default = {
 	PORTAMENTO_CONTROL: 0x54,
 	HIGH_RESOLUTION_VELOCITY_PREFIX: 0x58
 };
+module.exports = exports['default'];

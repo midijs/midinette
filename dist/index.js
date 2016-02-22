@@ -27,5 +27,5 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 var Midinette = Object.assign({}, _controlChange2.default, _midiNotes2.default, _statusCodes2.default, Functions);
 
 global.Midinette = Midinette;
-
 exports.default = Midinette;
+module.exports = exports['default'];

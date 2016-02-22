@@ -8,5 +8,4 @@ var Midinette = Object.assign(
 );
 
 global.Midinette = Midinette;
-
 export default Midinette;
