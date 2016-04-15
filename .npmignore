@@ -1,4 +1,6 @@
 node_modules
-dist
+src
 browser
+.gitignore
+tests
 test.html

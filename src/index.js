@@ -3,9 +3,12 @@ import MidiNotes from './midiNotes';
 import StatusCodes from './statusCodes';
 import ControlChange from './controlChange';
 
-var Midinette = Object.assign(
-	{}, ControlChange, MidiNotes, StatusCodes, Functions
-);
+var Midinette = {
+	Notes         : MidiNotes,
+	StatusCodes   : StatusCodes,
+	ControlChange : ControlChange
+};
 
-global.Midinette = Midinette;
+Object.assign(Midinette, Functions);
+
 export default Midinette;

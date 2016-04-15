@@ -1,18 +1,17 @@
 {
   "name": "midinette",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "MIDI utility library",
   "main": "dist/index.js",
-  "jsnext:main": "src/index.js",
   "scripts": {
     "build:babel": "babel src --out-dir dist",
-    "build:browserify": "browserify dist/*.js --outfile bundle/midinette.js",
+    "build:browserify": "mkdir -p browser && browserify dist/index.js --standalone Midinette > browser/midinette.js",
     "build": "npm run build:babel && npm run build:browserify",
     "test": "mocha tests/*.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hngrhorace/midinette.git"
+    "url": "git+https://github.com/midijs/midinette.git"
   },
   "keywords": [
     "midi",
@@ -21,12 +20,13 @@
   "author": "Andor Polgar",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hngrhorace/midinette/issues"
+    "url": "https://github.com/midijs/midinette/issues"
   },
-  "homepage": "https://github.com/hngrhorace/midinette#readme",
+  "homepage": "https://github.com/midijs/midinette#readme",
   "devDependencies": {
     "babel-cli": "^6.5.1",
     "babel-plugin-add-module-exports": "^0.1.2",
+    "babel-plugin-transform-object-assign": "^6.5.0",
     "babel-preset-es2015": "^6.5.0",
     "browserify": "^13.0.0",
     "mocha": "^2.4.5",
