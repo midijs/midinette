@@ -1,13 +1,14 @@
 {
   "name": "midinette",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "MIDI utility library",
   "main": "dist/index.js",
   "scripts": {
     "build:babel": "babel src --out-dir dist",
     "build:browserify": "mkdir -p browser && browserify dist/index.js --standalone Midinette > browser/midinette.js",
     "build": "npm run build:babel && npm run build:browserify",
-    "test": "mocha tests/*.js"
+    "test": "mocha tests/*.js",
+	"prepublish": "npm run build && npm run test"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
     "babel-plugin-transform-object-assign": "^6.5.0",
     "babel-preset-es2015": "^6.5.0",
     "browserify": "^13.0.0",
+    "chai": "^3.5.0",
     "mocha": "^2.4.5",
     "underscore": "^1.8.3"
   }
