@@ -21,10 +21,24 @@ var noteOns = [
 	StatusCodes.NOTE_ON_CH16
 ];
 
+var notNoteOns = [
+	StatusCodes.NOTE_OFF_CH1,
+	StatusCodes.POLYPHONIC_AFTERTOUCH_CH1,
+	StatusCodes.CONTROL_CHANGE_CH1,
+	StatusCodes.PROGRAM_CHANGE_CH1,
+	StatusCodes.CHANNEL_AFTERTOUCH_CH1,
+	StatusCodes.PITCH_WHEEL_CH1
+];
+
 describe('isNoteOn', function() {
 	it('should be true', function() {
 		noteOns.forEach(function(statusCode) {
 			assert.equal(Midinette.isNoteOn(statusCode), true);
+		});
+	});
+	it('should be false', function() {
+		notNoteOns.forEach(function(statusCode) {
+			assert.equal(Midinette.isNoteOn(statusCode), false);
 		});
 	});
 });
