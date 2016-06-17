@@ -2,6 +2,11 @@ import MidiNotes from './midiNotes';
 import * as StatusCodes from './statusCodes';
 import * as ControlChange from './controlChange';
 
+const MASK_EVENT = 0xf00000;
+const MASK_CHANNEL = 0x0f0000;
+const MASK_DATA_1 = 0x00ff00;
+const MASK_DATA_2 = 0x0000ff;
+
 class Midinette {
 	static isMIDIStatus(code) {
 		if (typeof code !== 'number') {
@@ -134,6 +139,15 @@ class Midinette {
 
 	static getChannelFromStatus(status) {
 		return (status % 0x10) + 1;
+	}
+
+	static eventMask(status, channel, data1, data2) {
+		let mask = 0x000000;
+		mask |= status ? MASK_EVENT : 0x000000;
+		mask |= channel ? MASK_CHANNEL : 0x000000;
+		mask |= data1 ? MASK_DATA_1 : 0x000000;
+		mask |= data2 ? MASK_DATA_2 : 0x000000;
+		return mask;
 	}
 }
 
