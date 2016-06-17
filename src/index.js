@@ -114,6 +114,8 @@ class Midinette {
 	}
 
 	static constructMIDIMessage(event, channel, data1, data2) {
+		channel = (channel < 1) ? 1 : channel;
+		channel = (channel > 16) ? 16 : channel;
 		return [(event & 0xf0) + (channel - 1), data1, data2];
 	}
 
