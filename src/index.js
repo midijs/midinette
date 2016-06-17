@@ -119,8 +119,10 @@ class Midinette {
 	}
 
 	static constructMIDIMessage(event, channel, data1, data2) {
-		channel = (channel < 1) ? 1 : channel;
-		channel = (channel > 16) ? 16 : channel;
+		event = Math.min(Math.max(event, 0x80), 0xef);
+		channel = Math.min(Math.max(channel, 1), 16);
+		data1 = Math.min(Math.max(data1, 0x00), 0xff);
+		data2 = Math.min(Math.max(data2, 0x00), 0xff);
 		return [(event & 0xf0) + (channel - 1), data1, data2];
 	}
 
